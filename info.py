@@ -43,7 +43,7 @@ class evamaria(Client):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '12618934'))
 API_HASH = environ.get('API_HASH', '49aacd0bc2f8924add29fb02e20c8a16')
-BOT_TOKEN = environ['BOT_TOKEN']
+BOT_TOKEN = environ.get("BOT_TOKEN", "7752302892:AAGqpaXAS5wDKsptuWaikkaEQAPbUd8Bwf8")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 600))
@@ -57,8 +57,8 @@ MELCOW_IMG = environ.get('MELCOW_IMG',"https://telegra.ph/file/e54cae941b9b81f13
 MELCOW_VID = environ.get('MELCOW_VID',"")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1509123054 1297128957').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5032034594').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-100247455487 -100246714951').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -102,7 +102,7 @@ MAIN_CHANNEL = environ.get('MAIN_CHANNEL' "-1002062020127")
 FILE_FORWARD = environ.get('FILE_FORWARD')
 MSG_ALRT = environ.get('MSG_ALRT', '𝑪𝑯𝑬𝑪𝑲 & 𝑻𝑹𝒀 𝑨𝑳𝑳 𝑴𝒀 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '0'))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002062020127'))                           
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-100233236188'))                           
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
